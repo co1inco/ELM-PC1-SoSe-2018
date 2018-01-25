@@ -1,1 +1,1 @@
-print("Hello World!")
+print("Studieren in Minden ist super!")
