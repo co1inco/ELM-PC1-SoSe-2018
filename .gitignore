@@ -259,3 +259,5 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/PythonApplication1/PythonApplication1.sln
+/PythonApplication1/PythonApplication1/PythonApplication1.pyproj
