@@ -1,27 +1,23 @@
+// Aufgabe 7
+
 #include <stdio.h>
 
-int main(){
-	
-//	while (1){
-		char z1;
-	
-		scanf("%c", &z1);
-	
-		switch (z1){
-			case 'g':
-				printf("Go!");
-				break;
-			case 'y':
-				printf("Carefull!");
-				break;
-			case 'r':
-				printf("STOP!");
-				break;
-			default:
-				printf("wrong Input");
-				break;
-		}
-//	}	
-	
+int main() {
+	int i = 0;	
+	int sum = 0;
+	char d[10];
+
+	while (i != -1) {
+		
+		memset(&d, 0, 10)
+		scanf("%s", &d); 
+		strtol(d, i);
+		printf("%d, %i", d, i);
+		
+		sum = sum + i;
+	}
+
+	printf("%i", sum);
+
 	return 0;
 }
