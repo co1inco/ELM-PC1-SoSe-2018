@@ -1,6 +1,6 @@
 // Aufgabe 2.2
 
-#define LENGTH (10)
+#define LENGTH (5)
 
 #include <stdio.h>
 
