@@ -9,16 +9,15 @@ long map(long x, long in_min, long in_max, long out_min, long out_max)
 
 
 int map(int value, int fromLow, int fromHigh, int toLow, int toHigh){
-	// not teste what happens if upper and lower are switcht!!
+	// entpricht gekürzt genau der arduino map funktion \o/
 	int fromDif = fromHigh - fromLow;
 	int toDif   = toHigh - toLow;
-	
 	value = value - fromLow;
 	
-//	float perc = (100.0/fromDif) * value;
-	int fVal = round( (toDif/100.0 ) * ((100.0/fromDif)*value) );
+	int fVal = (toDif/100.0 ) * ((100.0/fromDif)*value);
 	
 	return toLow+fVal;	
+	
 }
 
 
@@ -38,14 +37,24 @@ int value_to_celsius(int value){
 void main(){
 	int val = 9;
 	int out;
+
+	for (val=100; val <=300; val=val+50){
+		printf("%i %i %i %i\n", map(val, 100, 300, 0, 8), map(val, 300, 100, 0, 8), map(val, 100, 300, 8, 0), map(val, 160, 240, 0, 8));
+	}
 	
+	
+	
+/*	
 	for (val=1; val != 0; scanf("%i", &val)){
-		out = value_to_led(val, 100, 300);
+		out = map(val, 100, 300, 0, 8);
+//		out = value_to_led(val, 100, 300);
 //		out = value_to_celsius(val);
 		
 		printf("\n");
 	
 		printf("\b - Map: %i\n", out);  
 	}
+*/
+
 
 }
